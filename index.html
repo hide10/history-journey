@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>138億年の旅 — 宇宙のはじまりから、あなたまで</title>
+<meta name="description" content="宇宙のビッグバンから、地球、生命、人類、世界史、日本史、そして今のあなたまで。すべての歴史をひとつの物語としてスクロールで旅する、歴史が苦手な人のための入門サイト。">
+<meta name="theme-color" content="#0b0f2a">
+<!-- OGP -->
+<meta property="og:title" content="138億年の旅 — 宇宙のはじまりから、あなたまで">
+<meta property="og:description" content="ビッグバンから今のあなたまで、すべての歴史をひとつの物語として旅しよう。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 星空の背景 -->
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<!-- 進行度バー（時間の進み） -->
+<div class="progress-wrap" aria-hidden="true">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- ナビゲーション -->
+<nav class="side-nav" id="sideNav" aria-label="章の移動">
+  <a href="#hero" data-label="はじまり" class="dot active"></a>
+  <a href="#universe" data-label="宇宙" class="dot"></a>
+  <a href="#earth" data-label="地球" class="dot"></a>
+  <a href="#life" data-label="生命" class="dot"></a>
+  <a href="#human" data-label="人類" class="dot"></a>
+  <a href="#world" data-label="世界史" class="dot"></a>
+  <a href="#japan" data-label="日本史" class="dot"></a>
+  <a href="#you" data-label="あなた" class="dot"></a>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero section">
+  <div class="hero-inner reveal">
+    <p class="hero-eyebrow">歴史が苦手なあなたへ</p>
+    <h1 class="hero-title">138億年の旅</h1>
+    <p class="hero-sub">宇宙のはじまりから、<br>今の<ruby>あなた<rt>・・・</rt></ruby>まで。</p>
+    <p class="hero-lead">
+      年号を覚える必要はありません。<br>
+      これは、たったひとつの――そしてまだ終わっていない――<br class="pc-only"><span class="nowrap"><b>壮大な物語</b>です。</span>
+    </p>
+    <a href="#universe" class="scroll-cue" aria-label="旅をはじめる">
+      <span>下にスクロールして旅をはじめる</span>
+      <span class="chevron">﹀</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 宇宙カレンダー（つかみ）============ -->
+<section id="calendar" class="section calendar-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="chapter-kicker">まずは、途方もない話から</p>
+      <h2 class="chapter-title">もし138億年を<br>「1年のカレンダー」にしたら？</h2>
+      <p class="chapter-desc">
+        宇宙が生まれてから今日までの138億年。数字が大きすぎてピンときませんよね。
+        そこで、この気の遠くなる長さを<b>ちょうど1年（1月1日〜12月31日）</b>に縮めてみましょう。
+        すると、驚くことが起こります。
+      </p>
+    </div>
+
+    <div class="cosmic-calendar reveal" id="cosmicCalendar">
+      <!-- JSで月を描画 -->
+    </div>
+
+    <p class="calendar-punch reveal">
+      人類の歴史ぜんぶ（文明も、戦争も、あなたのおじいちゃんも）は、<br>
+      <b class="hl">12月31日の、最後の数十秒</b>に、ぎゅっと詰まっています。
+    </p>
+    <p class="calendar-note reveal">つまり歴史は、宇宙にとって「ついさっき」の出来事。さあ、1月1日に戻って旅をはじめましょう。</p>
+  </div>
+</section>
+
+<!-- ============ 宇宙 ============ -->
+<section id="universe" class="section chapter" data-theme="universe">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chapter-emoji">✨</span>
+      <p class="chapter-when">今から138億年前 ・ 1月1日</p>
+      <h2 class="chapter-title">すべては「光」から<br>はじまった</h2>
+    </div>
+
+    <div class="story reveal">
+      <p>
+        はじまりは、あまりにも小さな一点でした。ある瞬間、それが想像を絶する勢いでふくらみます。
+        これが<b>ビッグバン</b>。宇宙の誕生日です。
+      </p>
+      <p>
+        生まれたての宇宙は、火の玉のように熱く、まぶしい光でいっぱいでした。
+        やがて冷えていくと、ガスが集まり、重さで押しつぶされて――ついに<b>星</b>が輝きはじめます。
+        星は集まって<b>銀河</b>となり、宇宙は少しずつ、今の姿に近づいていきました。
+      </p>
+    </div>
+
+    <div class="fact-card reveal">
+      <span class="fact-badge">💫 いちばん伝えたい話</span>
+      <p class="fact-lead">あなたの体は、「星のかけら」でできています。</p>
+      <p>
+        あなたの血の中の<b>鉄</b>、骨の<b>カルシウム</b>、息に混じる<b>炭素</b>。
+        これらは全部、大昔の星が一生を終えるときに作り、宇宙にまき散らしたものです。
+        私たちは文字どおり、<b>星のうまれ変わり</b>。夜空を見上げるのは、遠い親戚に会いに行くようなものなのです。
+      </p>
+    </div>
+
+    <ul class="mini-timeline reveal">
+      <li><span class="dot-num">138億年前</span> ビッグバン。宇宙のはじまり</li>
+      <li><span class="dot-num">137億年前</span> 最初の星が輝きだす</li>
+      <li><span class="dot-num">130億年前</span> 銀河が生まれる（私たちの天の川銀河も）</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 地球 ============ -->
+<section id="earth" class="section chapter" data-theme="earth">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chapter-emoji">🌏</span>
+      <p class="chapter-when">今から46億年前 ・ 9月ごろ</p>
+      <h2 class="chapter-title">私たちの「地球」が<br>生まれる</h2>
+    </div>
+
+    <div class="story reveal">
+      <p>
+        宇宙の片隅で、ガスとチリがぐるぐる回りながら集まり、真ん中に<b>太陽</b>が生まれました。
+        その周りに残ったかけらがぶつかり合い、だんだん大きな球になっていきます。そのひとつが――<b>地球</b>です。
+      </p>
+      <p>
+        できたての地球はマグマだらけの灼熱の星。そこへ火星ほどの天体が大衝突し、
+        飛び散ったかけらが集まって<b>月</b>ができたと考えられています。
+        やがて地球が冷えると雨が降りつづき、<b>海</b>が生まれました。生命のゆりかごの完成です。
+      </p>
+    </div>
+
+    <div class="fact-card reveal">
+      <span class="fact-badge">🌙 へぇポイント</span>
+      <p class="fact-lead">月は、地球の「大事故」の記念品。</p>
+      <p>
+        夜空にやさしく浮かぶ月は、じつは大昔の大激突で生まれた「かけら」です。
+        しかもこの月があるおかげで、地球の傾きが安定し、四季がおだやかに巡ります。
+        月がなければ、気候はもっと荒れていたかもしれません。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 生命 ============ -->
+<section id="life" class="section chapter" data-theme="life">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chapter-emoji">🐟</span>
+      <p class="chapter-when">今から38億年前 ・ 9月〜12月30日</p>
+      <h2 class="chapter-title">海の中で、<br>「いのち」が芽ばえる</h2>
+    </div>
+
+    <div class="story reveal">
+      <p>
+        あたたかい海の中で、最初の<b>いのち</b>が生まれました。目に見えないほど小さな、たった1個の細胞。
+        これがあなたや、犬や、桜の木の、いちばん最初のご先祖さまです。<b>生き物はみんな親戚</b>なのです。
+      </p>
+      <p>
+        やがて、酸素を作り出す微生物が登場し、空気ができあがります。生き物は海から陸へ。
+        そして地球の主役になったのが――巨大な<b>恐竜</b>たちでした。
+      </p>
+      <p>
+        ところが約6600万年前、巨大な隕石が地球に激突。恐竜は姿を消します。
+        しかしそのおかげで、それまで隅で小さく暮らしていた<b>哺乳類</b>に出番が回ってきました。
+        私たちの祖先の、大きなチャンスの始まりです。
+      </p>
+    </div>
+
+    <div class="fact-card reveal">
+      <span class="fact-badge">🦖 へぇポイント</span>
+      <p class="fact-lead">恐竜がいなくなったから、あなたがいる。</p>
+      <p>
+        もし隕石が落ちてこなかったら、地球は今も恐竜の天下で、人類は登場しなかったかもしれません。
+        あの「大事件」は、私たちにとっては<b>幸運の入り口</b>でもあったのです。歴史は、こんな偶然の連続でできています。
+      </p>
+    </div>
+
+    <ul class="mini-timeline reveal">
+      <li><span class="dot-num">38億年前</span> 最初の生命（1個の細胞）</li>
+      <li><span class="dot-num">5億年前</span> 魚のなかま、そして陸へ</li>
+      <li><span class="dot-num">2億年前</span> 恐竜の時代</li>
+      <li><span class="dot-num">6600万年前</span> 隕石衝突 → 哺乳類の時代へ</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 人類 ============ -->
+<section id="human" class="section chapter" data-theme="human">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chapter-emoji">🚶</span>
+      <p class="chapter-when">今から700万〜1万年前 ・ 12月31日の夜</p>
+      <h2 class="chapter-title">ついに、<br>「人間」の登場です</h2>
+    </div>
+
+    <div class="story reveal">
+      <p>
+        アフリカで、二本の足で立ち上がるサルの仲間が現れました。
+        手が自由になった彼らは、<b>道具</b>を作り、<b>火</b>を使い、そして何より<b>言葉</b>を手に入れます。
+        言葉は、心の中を伝え合い、知恵を次の世代へ受けわたす魔法の道具でした。
+      </p>
+      <p>
+        私たち<b>ホモ・サピエンス</b>（＝かしこい人、という意味）は、約30万年前に登場。
+        やがてアフリカを出て、歩いて世界中へ広がっていきます。この大冒険を<b>グレート・ジャーニー</b>と呼びます。
+      </p>
+      <p>
+        そして約1万年前、人類は大発明をします。<b>農業</b>です。
+        自分で食べ物を育てられるようになると、人々は一か所に住みはじめ、村ができ、町ができ――
+        いよいよ「歴史」の幕が上がります。
+      </p>
+    </div>
+
+    <div class="fact-card reveal">
+      <span class="fact-badge">🌍 へぇポイント</span>
+      <p class="fact-lead">世界中の人は、みんな「アフリカ出身」。</p>
+      <p>
+        肌の色や言葉は違っても、たどっていけば私たちのご先祖はみんな同じアフリカの人々です。
+        人類は長い旅の末に世界へ散らばった、<b>ひとつの大家族</b>。壮大な家系図の、はるか先っぽに、あなたがいます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 世界史 ============ -->
+<section id="world" class="section chapter timeline-chapter" data-theme="world">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chapter-emoji">🏛️</span>
+      <p class="chapter-when">紀元前3000年ごろ〜現在 ・ 12月31日 最後の1分</p>
+      <h2 class="chapter-title">世界史ダイジェスト</h2>
+      <p class="chapter-desc">
+        ここからは、いよいよ人類の物語。難しい年号は忘れて、「大きな流れ」と「なるほど」だけ味わってください。
+        カードをタップすると、ちょっとした<b>へぇ話</b>が開きます。
+      </p>
+    </div>
+
+    <div class="timeline" id="worldTimeline">
+      <!-- JSでカードを生成 -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ 日本史 ============ -->
+<section id="japan" class="section chapter timeline-chapter" data-theme="japan">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chapter-emoji">🗾</span>
+      <p class="chapter-when">1万年以上前〜現在</p>
+      <h2 class="chapter-title">日本史ダイジェスト</h2>
+      <p class="chapter-desc">
+        私たちの足もと、日本列島の物語です。教科書だと人物と年号だらけですが、
+        ここでは「どんな時代だったか」を一言でつかみましょう。カードをタップで<b>へぇ話</b>が開きます。
+      </p>
+    </div>
+
+    <div class="timeline" id="japanTimeline">
+      <!-- JSでカードを生成 -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ あなた（まとめ）============ -->
+<section id="you" class="section you-section" data-theme="you">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="chapter-emoji">💛</span>
+      <p class="chapter-when">そして、今日 ・ 12月31日 23時59分59秒</p>
+      <h2 class="chapter-title">物語の最先端に、<br>あなたがいる</h2>
+    </div>
+
+    <div class="story story-center reveal">
+      <p>
+        ビッグバンから138億年。星が生まれ、地球ができ、いのちが芽ばえ、
+        人類が言葉をおぼえ、たくさんの人が笑ったり泣いたり戦ったりしながら、バトンをつないできました。
+      </p>
+      <p>
+        その気の遠くなるようなリレーの、<b>いちばん先っぽ</b>を、今あなたが走っています。
+        あなたが生きている今日という日も、100年後の誰かにとっては「歴史」になります。
+      </p>
+      <p class="you-punch">
+        歴史とは、遠い昔の暗記ものではなく――<br>
+        <b class="hl">今日まで続いてきた、大きな物語のこと。</b><br>
+        そして、あなたはその登場人物のひとりです。
+      </p>
+      <p class="you-closing">
+        きっかけは、ほんの少しの「へぇ！」で十分。<br>
+        この旅が、あなたにとって歴史を好きになる、最初の一歩になりますように。
+      </p>
+    </div>
+
+    <div class="restart reveal">
+      <a href="#hero" class="btn-restart">↑ もう一度、旅のはじまりへ</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>138億年の旅 — 宇宙のはじまりから、あなたまで</p>
+  <p class="footer-sub">大切な人が歴史を好きになりますように、という気持ちで作りました。</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
