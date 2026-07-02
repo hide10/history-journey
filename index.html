@@ -42,6 +42,10 @@
 
 <!-- ============ HERO ============ -->
 <section id="hero" class="hero section">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="assets/img/hero.webp" width="1344" height="768"
+         alt="" fetchpriority="high">
+  </div>
   <div class="hero-inner reveal">
     <p class="hero-eyebrow">歴史が苦手なあなたへ</p>
     <h1 class="hero-title">138億年の旅</h1>
@@ -70,26 +74,30 @@
       </p>
     </div>
 
-    <div class="cosmic-calendar reveal" id="cosmicCalendar">
-      <!-- JSで月を描画 -->
+    <div class="cosmic-calendar" id="cosmicCalendar">
+      <!-- JS（calendar.js）が12ヶ月グリッド＋12/31ズーム図解を描画 -->
     </div>
 
     <p class="calendar-punch reveal">
       人類の歴史ぜんぶ（文明も、戦争も、あなたのおじいちゃんも）は、<br>
-      <b class="hl">12月31日の、最後の数十秒</b>に、ぎゅっと詰まっています。
+      <b class="hl">12月31日の、最後の8分</b>に、ぎゅっと詰まっています。
     </p>
     <p class="calendar-note reveal">つまり歴史は、宇宙にとって「ついさっき」の出来事。さあ、1月1日に戻って旅をはじめましょう。</p>
   </div>
 </section>
 
 <!-- ============ 宇宙 ============ -->
-<section id="universe" class="section chapter" data-theme="universe">
-  <div class="wrap">
-    <div class="chapter-head reveal">
-      <span class="chapter-emoji">✨</span>
-      <p class="chapter-when">今から138億年前 ・ 1月1日</p>
+<section id="universe" class="section chapter has-cover" data-theme="universe">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-universe.webp" width="1344" height="768"
+         loading="lazy" alt="闇の中で金色の光が爆発する、宇宙のはじまりのイメージ">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">01</span>
+      <p class="chapter-when">今から138億年前 ・ 宇宙カレンダーの1月1日</p>
       <h2 class="chapter-title">すべては「光」から<br>はじまった</h2>
     </div>
+  </div>
+  <div class="wrap">
 
     <div class="story reveal">
       <p>
@@ -118,6 +126,8 @@
       <li><span class="dot-num">137億年前</span> 最初の星が輝きだす</li>
       <li><span class="dot-num">130億年前</span> 銀河が生まれる（私たちの天の川銀河も）</li>
     </ul>
+
+    <div class="artifact-row" data-artifacts="universe"></div>
   </div>
 </section>
 
@@ -315,6 +325,7 @@
 </footer>
 
 <script src="js/data.js"></script>
+<script src="js/calendar.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

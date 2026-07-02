@@ -109,20 +109,30 @@
   }
 
   // ----------------------------------------------------------
-  // 2. 宇宙カレンダーの描画
+  // 2. 実物資料「本物を見てみよう」カードの描画
+  //    <div data-artifacts="universe"> のような置き場に流し込む
   // ----------------------------------------------------------
-  const calendarEl = document.getElementById("cosmicCalendar");
-  if (calendarEl && typeof COSMIC_CALENDAR !== "undefined") {
-    COSMIC_CALENDAR.forEach((item, i) => {
-      const row = document.createElement("div");
-      row.className = "cal-row reveal";
-      row.style.transitionDelay = `${Math.min(i * 60, 400)}ms`;
-      row.innerHTML = `
-        <span class="cal-emoji">${item.emoji}</span>
-        <span class="cal-date">${item.month}</span>
-        <span class="cal-label"><b>${item.label}</b><small>${item.detail}</small></span>
-      `;
-      calendarEl.appendChild(row);
+  if (typeof ARTIFACTS !== "undefined") {
+    document.querySelectorAll("[data-artifacts]").forEach((row) => {
+      const items = ARTIFACTS[row.dataset.artifacts] || [];
+      items.forEach((a) => {
+        const fig = document.createElement("figure");
+        fig.className = "artifact-card reveal";
+        fig.innerHTML = `
+          <div class="artifact-frame">
+            <img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy"
+                 alt="${a.title}">
+          </div>
+          <figcaption>
+            <span class="artifact-badge">🏛️ 本物を見てみよう</span>
+            <h3 class="artifact-title">${a.title}</h3>
+            <p class="artifact-year">${a.year}</p>
+            <p class="artifact-desc">${a.desc}</p>
+            <p class="artifact-credit">出典: ${a.credit}</p>
+          </figcaption>
+        `;
+        row.appendChild(fig);
+      });
     });
   }
 
