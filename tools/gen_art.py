@@ -22,7 +22,7 @@ HOST = os.environ.get("COMFYUI_HOST", "localhost:8188")
 MODEL = "epicrealismXL_pureFix.safetensors"
 NEGATIVE = (
     "text, watermark, logo, signature, blurry, low quality, "
-    "distorted, deformed, cartoon, anime, nsfw"
+    "distorted, deformed, cartoon, anime, nsfw, nude, naked, bare skin"
 )
 
 

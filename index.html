@@ -10,6 +10,8 @@
 <meta property="og:title" content="138億年の旅 — 宇宙のはじまりから、あなたまで">
 <meta property="og:description" content="ビッグバンから今のあなたまで、すべての歴史をひとつの物語として旅しよう。">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://hide10.github.io/history-journey/assets/img/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,14 +134,17 @@
 </section>
 
 <!-- ============ 地球 ============ -->
-<section id="earth" class="section chapter" data-theme="earth">
-  <div class="wrap">
-    <div class="chapter-head reveal">
-      <span class="chapter-emoji">🌏</span>
-      <p class="chapter-when">今から46億年前 ・ 9月ごろ</p>
+<section id="earth" class="section chapter has-cover" data-theme="earth">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-earth.webp" width="1344" height="768"
+         loading="lazy" alt="灼熱のマグマをたたえた原始地球に天体が衝突するイメージ">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">02</span>
+      <p class="chapter-when">今から46億年前 ・ 宇宙カレンダーの9月ごろ</p>
       <h2 class="chapter-title">私たちの「地球」が<br>生まれる</h2>
     </div>
-
+  </div>
+  <div class="wrap">
     <div class="story reveal">
       <p>
         宇宙の片隅で、ガスとチリがぐるぐる回りながら集まり、真ん中に<b>太陽</b>が生まれました。
@@ -161,18 +166,24 @@
         月がなければ、気候はもっと荒れていたかもしれません。
       </p>
     </div>
+
+    <div class="diagram reveal" id="earthClock"></div>
+    <div class="artifact-row" data-artifacts="earth"></div>
   </div>
 </section>
 
 <!-- ============ 生命 ============ -->
-<section id="life" class="section chapter" data-theme="life">
-  <div class="wrap">
-    <div class="chapter-head reveal">
-      <span class="chapter-emoji">🐟</span>
-      <p class="chapter-when">今から38億年前 ・ 9月〜12月30日</p>
+<section id="life" class="section chapter has-cover" data-theme="life">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-life.webp" width="1344" height="768"
+         loading="lazy" alt="朝霧の原始林を歩く恐竜のシルエット">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">03</span>
+      <p class="chapter-when">今から38億年前 ・ 宇宙カレンダーの9月〜12月30日</p>
       <h2 class="chapter-title">海の中で、<br>「いのち」が芽ばえる</h2>
     </div>
-
+  </div>
+  <div class="wrap">
     <div class="story reveal">
       <p>
         あたたかい海の中で、最初の<b>いのち</b>が生まれました。目に見えないほど小さな、たった1個の細胞。
@@ -204,18 +215,24 @@
       <li><span class="dot-num">2億年前</span> 恐竜の時代</li>
       <li><span class="dot-num">6600万年前</span> 隕石衝突 → 哺乳類の時代へ</li>
     </ul>
+
+    <div class="diagram reveal" id="lifeTree"></div>
+    <div class="artifact-row" data-artifacts="life"></div>
   </div>
 </section>
 
 <!-- ============ 人類 ============ -->
-<section id="human" class="section chapter" data-theme="human">
-  <div class="wrap">
-    <div class="chapter-head reveal">
-      <span class="chapter-emoji">🚶</span>
+<section id="human" class="section chapter has-cover" data-theme="human">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-human.webp" width="1344" height="768"
+         loading="lazy" alt="天の川の下、焚き火を囲む初期人類のシルエット">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">04</span>
       <p class="chapter-when">今から700万〜1万年前 ・ 12月31日の夜</p>
       <h2 class="chapter-title">ついに、<br>「人間」の登場です</h2>
     </div>
-
+  </div>
+  <div class="wrap">
     <div class="story reveal">
       <p>
         アフリカで、二本の足で立ち上がるサルの仲間が現れました。
@@ -241,56 +258,78 @@
         人類は長い旅の末に世界へ散らばった、<b>ひとつの大家族</b>。壮大な家系図の、はるか先っぽに、あなたがいます。
       </p>
     </div>
+
+    <div class="diagram reveal" id="humanJourney"></div>
+    <div class="artifact-row" data-artifacts="human"></div>
   </div>
 </section>
 
 <!-- ============ 世界史 ============ -->
-<section id="world" class="section chapter timeline-chapter" data-theme="world">
-  <div class="wrap">
-    <div class="chapter-head reveal">
-      <span class="chapter-emoji">🏛️</span>
+<section id="world" class="section chapter has-cover timeline-chapter" data-theme="world">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-world.webp" width="1344" height="768"
+         loading="lazy" alt="夕陽の砂漠を行くラクダの隊商とピラミッド">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">05</span>
       <p class="chapter-when">紀元前3000年ごろ〜現在 ・ 12月31日 最後の1分</p>
       <h2 class="chapter-title">世界史ダイジェスト</h2>
-      <p class="chapter-desc">
-        ここからは、いよいよ人類の物語。難しい年号は忘れて、「大きな流れ」と「なるほど」だけ味わってください。
-        カードをタップすると、ちょっとした<b>へぇ話</b>が開きます。
-      </p>
     </div>
+  </div>
+  <div class="wrap">
+    <p class="chapter-desc reveal">
+      ここからは、いよいよ人類の物語。難しい年号は忘れて、「大きな流れ」と「なるほど」だけ味わってください。
+      カードをタップすると、ちょっとした<b>へぇ話</b>が開きます。
+    </p>
+
+    <div class="diagram reveal" id="worldCivs"></div>
 
     <div class="timeline" id="worldTimeline">
       <!-- JSでカードを生成 -->
     </div>
+
+    <div class="artifact-row" data-artifacts="world"></div>
   </div>
 </section>
 
 <!-- ============ 日本史 ============ -->
-<section id="japan" class="section chapter timeline-chapter" data-theme="japan">
-  <div class="wrap">
-    <div class="chapter-head reveal">
-      <span class="chapter-emoji">🗾</span>
+<section id="japan" class="section chapter has-cover timeline-chapter" data-theme="japan">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-japan.webp" width="1344" height="768"
+         loading="lazy" alt="夕暮れの日本の宿場町、提灯の灯りと富士山">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">06</span>
       <p class="chapter-when">1万年以上前〜現在</p>
       <h2 class="chapter-title">日本史ダイジェスト</h2>
-      <p class="chapter-desc">
-        私たちの足もと、日本列島の物語です。教科書だと人物と年号だらけですが、
-        ここでは「どんな時代だったか」を一言でつかみましょう。カードをタップで<b>へぇ話</b>が開きます。
-      </p>
     </div>
+  </div>
+  <div class="wrap">
+    <p class="chapter-desc reveal">
+      私たちの足もと、日本列島の物語です。教科書だと人物と年号だらけですが、
+      ここでは「どんな時代だったか」を一言でつかみましょう。カードをタップで<b>へぇ話</b>が開きます。
+    </p>
+
+    <div class="diagram reveal" id="japanEras"></div>
 
     <div class="timeline" id="japanTimeline">
       <!-- JSでカードを生成 -->
     </div>
+
+    <div class="artifact-row" data-artifacts="japan"></div>
   </div>
 </section>
 
 <!-- ============ あなた（まとめ）============ -->
-<section id="you" class="section you-section" data-theme="you">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="chapter-emoji">💛</span>
+<section id="you" class="section you-section has-cover" data-theme="you">
+  <div class="ch-cover">
+    <img class="ch-cover-img" src="assets/img/ch-you.webp" width="1344" height="768"
+         loading="lazy" alt="夜明けの地平線を見つめて丘に立つ人の後ろ姿">
+    <div class="ch-cover-text">
+      <span class="ch-num" aria-hidden="true">07</span>
       <p class="chapter-when">そして、今日 ・ 12月31日 23時59分59秒</p>
       <h2 class="chapter-title">物語の最先端に、<br>あなたがいる</h2>
     </div>
-
+  </div>
+  <div class="wrap">
     <div class="story story-center reveal">
       <p>
         ビッグバンから138億年。星が生まれ、地球ができ、いのちが芽ばえ、
@@ -300,6 +339,12 @@
         その気の遠くなるようなリレーの、<b>いちばん先っぽ</b>を、今あなたが走っています。
         あなたが生きている今日という日も、100年後の誰かにとっては「歴史」になります。
       </p>
+    </div>
+
+    <div class="diagram reveal" id="popCurve"></div>
+    <div class="artifact-row" data-artifacts="you"></div>
+
+    <div class="story story-center reveal">
       <p class="you-punch">
         歴史とは、遠い昔の暗記ものではなく――<br>
         <b class="hl">今日まで続いてきた、大きな物語のこと。</b><br>
@@ -326,6 +371,7 @@
 
 <script src="js/data.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/diagrams.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

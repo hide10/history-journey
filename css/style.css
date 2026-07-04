@@ -540,6 +540,82 @@ body {
 .cc-mnote { fill: var(--ink-faint); font-size: 11.5px; }
 .cc-marklabel.cc-you .cc-mlabel { fill: var(--gold); font-size: 16px; }
 
+/* ---------- 章の図解（SVG共通） ---------- */
+.diagram { margin: 46px 0 10px; }
+.dg-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.dg-svg { width: 100%; min-width: 560px; height: auto; display: block; }
+.dg-caption {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.9;
+  margin: 16px auto 0;
+  max-width: 40em;
+  text-align: center;
+}
+.dg-caption b { color: var(--gold); }
+
+/* テキスト共通 */
+.dg-ticklabel, .dg-axislabel { fill: var(--ink-faint); font-size: 12px; }
+.dg-tick { stroke: rgba(255, 255, 255, 0.3); stroke-width: 1.5; }
+.dg-tick-major { stroke: rgba(255, 255, 255, 0.55); stroke-width: 2; }
+.dg-leader { stroke: rgba(255, 255, 255, 0.28); stroke-width: 1; }
+.dg-leader.dg-you { stroke: var(--gold); opacity: 0.7; }
+
+/* ① 地球時計 */
+.dg-ring { fill: rgba(255, 255, 255, 0.03); stroke: rgba(255, 255, 255, 0.28); stroke-width: 2; }
+.dg-center-top { fill: var(--ink-soft); font-size: 15px; }
+.dg-center-big { fill: var(--gold); font-family: var(--font-serif); font-weight: 900; font-size: 30px; }
+.dg-center-sub { fill: var(--ink-faint); font-size: 11.5px; }
+.dg-dot { fill: var(--ink); }
+.dg-dot.dg-you { fill: var(--gold); }
+.dg-lg-time { fill: var(--gold); font-size: 13px; font-weight: 700; }
+.dg-lg-label { fill: var(--ink); font-size: 14.5px; font-weight: 700; }
+.dg-lg-note { fill: var(--ink-faint); font-size: 11.5px; }
+
+/* ② 系統樹 */
+.dg-trunk { stroke: var(--gold); stroke-width: 4; }
+.dg-trunk-label { fill: var(--ink); font-size: 14px; font-weight: 700; }
+.dg-trunk-sub { fill: var(--ink-faint); font-size: 11.5px; }
+.dg-branch { stroke: rgba(255, 255, 255, 0.35); stroke-width: 2; }
+.dg-branch-hl { stroke: var(--gold); stroke-width: 3.5; }
+.dg-leaf { fill: rgba(255, 255, 255, 0.6); }
+.dg-leaf-hl { fill: var(--gold); }
+.dg-leaf-label { fill: var(--ink-soft); font-size: 13.5px; }
+.dg-leaf-label-hl { fill: var(--gold); font-weight: 700; font-size: 15px; }
+
+/* ③ グレートジャーニー */
+.dg-route {
+  stroke: var(--gold); stroke-width: 2.5; opacity: 0.85;
+  stroke-dasharray: 7 6;
+  animation: dg-dash 22s linear infinite;
+}
+@keyframes dg-dash { to { stroke-dashoffset: -260; } }
+@media (prefers-reduced-motion: reduce) { .dg-route { animation: none; } }
+.dg-route-to { fill: var(--ink); font-size: 14px; font-weight: 700; }
+.dg-route-yr { fill: var(--ink-faint); font-size: 12px; }
+.dg-origin { fill: var(--gold); }
+.dg-origin-halo { fill: none; stroke: var(--gold); stroke-width: 1.5; opacity: 0.4; }
+.dg-origin-label { fill: var(--gold); font-family: var(--font-serif); font-weight: 900; font-size: 17px; }
+.dg-origin-sub { fill: var(--ink-faint); font-size: 12px; }
+
+/* ④ 文明並行年表 */
+.dg-vgrid { stroke: rgba(255, 255, 255, 0.1); stroke-width: 1; }
+.dg-civbar { opacity: 0.9; }
+.dg-civname { fill: #fff; font-size: 13px; font-weight: 700; }
+
+/* ⑤ 日本史時代帯 */
+.dg-eraname { fill: var(--ink-soft); font-size: 13px; }
+.dg-erabar { opacity: 0.85; }
+.dg-erabar-hl { opacity: 1; }
+.dg-eralen { fill: var(--ink-faint); font-size: 12px; }
+
+/* ⑥ 人口カーブ */
+.dg-hgrid { stroke: rgba(255, 255, 255, 0.08); stroke-width: 1; }
+.dg-pop-area { fill: rgba(255, 209, 102, 0.14); stroke: none; }
+.dg-pop-line { stroke: var(--gold); stroke-width: 3; }
+.dg-pop-dot { fill: var(--gold); }
+.dg-pop-note { fill: var(--ink); font-size: 12.5px; font-weight: 700; }
+
 /* ---------- 実物資料「本物を見てみよう」 ---------- */
 .artifact-row {
   display: grid;
